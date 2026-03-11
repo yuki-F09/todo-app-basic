@@ -1,15 +1,15 @@
-import { useState } from 'react'
+//import { useState } from 'react'
 
 import './App.css'
-import { Button } from "./components/ui/button"
 
-import { getFirestore, collection, doc, setDoc } from 'firebase/firestore';
+import { /*getFirestore, collection,*/ doc, setDoc } from 'firebase/firestore';
 import { db } from './firebase';
+
+import {Layout} from "./components/organisms/Layout"
+import { Todos } from "./components/molecules/Todos"
 
 
 function App() {
-  const [count, setCount] = useState(0)
-
 
 
   const userObject = { "id": 1, "name": "Leanne Graham", "username": "Bret", "email": "Sincere@april.biz"};
@@ -34,15 +34,21 @@ function App() {
 
   return (
     <>
-    <p>とりあえずこれcssの適用もけさないとか</p>
+    <Layout/>
+    <div className="main pt-16">
+      <Todos/>
+    </div>
 
-    <button onClick={onClickUserButton}>userの保存</button>
-
-    <Button>Chadcnのボタン</Button>
+  
 
 
+    <div className="db-test bg-violet-300 mt-40">
+      <button onClick={onClickUserButton}>userの保存</button>
     <p >ユーザー名: {userObject.name}</p>
     <h3>登録してあるユーザー名: </h3>
+
+    </div>
+
     </>
   )
 }
