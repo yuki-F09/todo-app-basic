@@ -6,7 +6,10 @@ import { /*getFirestore, collection,*/ doc, setDoc } from 'firebase/firestore';
 import { db } from './firebase';
 
 import {Layout} from "./components/organisms/Layout"
-import { Todos } from "./components/molecules/Todos"
+import { Router } from "./rotuer/Router"
+
+import { BrowserRouter} from 'react-router-dom';
+
 
 
 function App() {
@@ -36,7 +39,12 @@ function App() {
     <>
     <Layout/>
     <div className="main pt-16">
-      <Todos/>
+      <BrowserRouter >
+        <Router/>
+
+      
+      </BrowserRouter>
+      
     </div>
 
   

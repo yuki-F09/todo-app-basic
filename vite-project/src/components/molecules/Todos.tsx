@@ -9,18 +9,24 @@ const exampleTodo1:Todo = {
   id:1,
   title:"今日の宿題",
   body:"これを終わらせること",
-  status:"new"
+  status:"完了"
 }
 
 const exampleTodo2:Todo = {
   id:2,
   title:"明日の宿題",
-  status:"new"
+  status:"未完了"
+}
+
+const exampleTodo3:Todo={
+  id:3,
+  title:"タイトルの長さが長いとどう崩れるかaaaaaaaaaaaaaaaaadddddddddddd",
+  status:"未完了",
+  body:"dddddaddddddddddddddddddddddddddddddddddddddddddnnnnnnnaaaaaaaaaaaaaaaasssssserrrrrrrrrrrrrrrrrrrrrrrr"
 }
 
 
-
-const TodoExamples = [exampleTodo1, exampleTodo2]
+const TodoExamples = [exampleTodo1, exampleTodo2,exampleTodo3 ]
 
 export const Todos = ()=>{
   return(
