@@ -1,18 +1,10 @@
 import { useState } from 'react'
 
 import './App.css'
+import { Button } from "./components/ui/button"
 
 import { getFirestore, collection, doc, setDoc } from 'firebase/firestore';
 import { db } from './firebase';
-/**
- * const userObject = { "id": 1, "name": "Leanne Graham", "username": "Bret", "email": "Sincere@april.biz"};
- * const documentId = userObject.id.toString();
- *  // FirestoreのドキュメントIDは文字列なので変換const { id, ...userData } = userObject; 
- * // idを除いたデータ// userData は以下のようになる// 
- * {"name": "Leanne Graham","username": "Bret", "email": "Sincere@april.biz"} 
-
-
- */
 
 
 function App() {
@@ -45,9 +37,12 @@ function App() {
     <p>とりあえずこれcssの適用もけさないとか</p>
 
     <button onClick={onClickUserButton}>userの保存</button>
-    
+
+    <Button>Chadcnのボタン</Button>
+
 
     <p >ユーザー名: {userObject.name}</p>
+    <h3>登録してあるユーザー名: </h3>
     </>
   )
 }
