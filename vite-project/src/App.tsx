@@ -17,9 +17,12 @@ function App() {
 
   const userObject = { "id": 1, "name": "Leanne Graham", "username": "Bret", "email": "Sincere@april.biz"};
 
-  const onClickUserButton = async () => { // 非同期処理なので async を追加
-    const documentId = userObject.id.toString(); // FirestoreのドキュメントIDは文字列なので変換
-    const { id, ...userData } = userObject; // ドキュメントの内容からは id を除外する
+  const onClickUserButton = async () => { 
+    // 非同期処理なので async を追加
+    const documentId = userObject.id.toString(); 
+    // FirestoreのドキュメントIDは文字列なので変換
+    const { id, ...userData } = userObject; 
+    // ドキュメントの内容からは id を除外する
 
     try {
       // 'users' コレクションの、documentId を持つドキュメントへの参照を作成し、userData を保存
